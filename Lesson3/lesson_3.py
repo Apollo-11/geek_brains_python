@@ -78,7 +78,6 @@ print(get_sum())
 
 
 # ----------- 6 - 7 -----------
-
 def int_func(word: str):
     return word.title()
 
@@ -89,3 +88,10 @@ while True:
         break
 
     print(int_func(word))
+
+text = input('Enter words separated by whitespaces')
+capitalised = []
+for word in text.split():
+    capitalised.append(int_func(word))
+
+print(' '.join(capitalised))
