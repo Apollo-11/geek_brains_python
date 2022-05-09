@@ -19,9 +19,16 @@ print(even_numbers)
 # ------------ 1 ------------
 from sys import argv
 
-script_name, hours, per_hour, bonus = argv
 
-print(f'The total payment is {(int(hours) * int(per_hour) + int(bonus))}')
+def salary():
+    try:
+        hours, per_hour, bonus = map(int, argv[1:])
+        print(f'The total payment is {hours * per_hour + bonus}')
+    except ValueError:
+        print('Enter 3 numbers')
+
+
+salary()
 
 # ------------ 2 ------------
 numbers = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
